@@ -16,6 +16,22 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+}
+
 /* =======================
    LAYOUT
 ======================= */
@@ -43,6 +59,7 @@ body {
 nav {
   display: flex;
   gap: 70px;
+  white-space: nowrap;
 }
 
 .nav-link {
@@ -278,10 +295,11 @@ nav {
 }
 
 /* HEADER */
+
 @media (max-width: 768px) {
 
   .header {
-    padding: 10px;
+    padding: 20px;
     font-size: 18px;
   }
 
@@ -295,16 +313,19 @@ nav {
 
   .nav-link {
     text-transform: uppercase;
+    font-size: 14px;
   }
 }
 
 /* BANNER */
+
 @media (max-width: 768px) {
 
   .banner {
     height: 120px;
-    font-size: 18px;
-    margin: 10px;
+    font-size: 13px;
+    margin: 20px 10px;
+    border-radius: 10px;
   }
 
   .banner h1 {
@@ -319,12 +340,17 @@ nav {
 }
 
 /* CARDS */
+
 @media (max-width: 768px) {
 
   .cards-container {
+    display: grid;
     grid-template-columns: 1fr;
-    padding: 15px;
+    padding: 5px 0;
+    margin: 30px 10px 0 10px;
     gap: 20px;
+    background: none;
+    border-radius: 10px;
   }
 
   .card {
@@ -333,7 +359,12 @@ nav {
 }
 
 /* ABOUT */
+
 @media (max-width: 768px) {
+
+  .about-collapses {
+    padding: 20px 0;
+  }
 
   .collapse {
     margin: 10px;
@@ -349,6 +380,7 @@ nav {
 }
 
 /* NOT FOUND */
+
 @media (max-width: 768px) {
 
   .notfound h1 {
@@ -362,5 +394,6 @@ nav {
 
   .notfound {
     gap: 40px;
+    margin-top: 60px;
   }
 }
