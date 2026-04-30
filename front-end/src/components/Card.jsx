@@ -1,11 +1,13 @@
-const Card = ({ title, image }) => {
+import { Link } from "react-router-dom"
+
+const Card = ({ title, image, id }) => {
     return (
-        <article className="card">
-            <img src={image} alt={title} />
-            <div className="card-overlay">
-                <h2>{title}</h2>
-            </div>
-        </article>
+        <Link to={`/property/${id}`} className="card">
+                <img src={image} alt={title} />
+                <div className="card-overlay">
+                    <h2>{title}</h2>
+                </div>
+        </Link>
     )
 }
 

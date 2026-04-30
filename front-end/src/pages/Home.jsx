@@ -34,6 +34,7 @@ export default function Home() {
                     properties.map((property) => (
                         <Card
                             key={property.id}
+                            id={property.id}
                             title={property.title}
                             image={property.cover}
                         />

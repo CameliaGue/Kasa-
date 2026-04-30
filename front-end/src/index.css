@@ -37,7 +37,7 @@ body,
 ======================= */
 
 .app-container {
-  margin: 30px 80px;
+  margin: 30px 90px;
 }
 
 /* =======================
@@ -128,6 +128,9 @@ nav {
   overflow: hidden;
   height: 340px;
   cursor: pointer;
+
+  text-decoration: none;
+  color: inherit;
 }
 
 .card img {
@@ -181,12 +184,17 @@ nav {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  overflow: hidden;
+  margin: 8px 90px;
 }
 
 .collapse {
   border-radius: 5px;
   overflow: hidden;
-  margin: 8px 90px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .collapse-header {
@@ -219,6 +227,7 @@ nav {
   font-size: 18px;
 
   transition: max-height 0.25s ease, padding 0.25s ease;
+  flex: 1;
 }
 
 .collapse-content.open {
@@ -281,6 +290,180 @@ nav {
   color: var(--text-dark);
   text-decoration: underline;
   padding-bottom: 100px;
+}
+
+/* =======================
+   PROPERTY
+======================= */
+
+.property {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.property-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 23px;
+}
+
+.property-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.property-info-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.property-collapses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin: 23px 0;
+  align-items: stretch;
+}
+
+.property-collapse {
+  display: flex;
+}
+
+.property .collapse-header h3 {
+  font-size: 18px;
+}
+
+.property-description,
+.property-equipments p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.title-location-title {
+  color: var(--primary);
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.title-location-location {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin: 10px 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.tag {
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 5px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.star {
+  width: 36px;
+  height: 36px;
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.host-name {
+  font-size: 19px;
+  color: var(--primary);
+  margin: 5px;
+  text-align: right;
+  width: 90px;
+}
+
+.host-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =======================
+   CAROUSEL
+======================= */
+
+.carousel {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-arrow.left {
+  left: 20px;
+}
+
+.carousel-arrow.right {
+  right: 20px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  z-index: 2;
 }
 
 /* =======================
@@ -365,15 +548,17 @@ nav {
 @media (max-width: 768px) {
 
   .about-collapses {
-    padding: 20px 0;
+    padding: 20px 10px 0 10px;
+    margin: 0;
   }
 
   .collapse {
-    margin: 10px;
+    margin: 0;
+    width: 100%;
   }
 
   .collapse-header h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .collapse-content {
@@ -399,3 +584,152 @@ nav {
     margin-top: 60px;
   }
 }
+
+    /* =======================
+       PROPERTY CONTAINER
+    ======================= */
+  
+    @media (max-width: 768px) {
+      .property {
+        padding: 0 10px;
+        margin: 0;
+        gap: 15px;
+      }
+  
+      .property-container {
+        width: 100%;
+        margin: 0;
+      }
+  
+      /* CAROUSEl */
+  
+      .property-carousel {
+        margin: 0;
+      }
+  
+      .carousel {
+        height: 255px;
+        border-radius: 10px;
+      }
+  
+      .carousel-counter {
+        display: none;
+      }
+  
+      .carousel-arrow {
+        width: 15px;
+        height: 20px;
+      }
+  
+      .carousel-arrow.left {
+        left: 7px;
+      }
+  
+      .carousel-arrow.right {
+        right: 7px;
+      }
+  
+  
+      /* INFOS */
+  
+      .property-info {
+        flex-direction: column;
+        margin: 10px 0;
+        gap: 15px;
+      }
+  
+      .property-info-left,
+      .property-info-right {
+        width: 100%;
+      }
+  
+      .property-info-right {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+      }
+  
+      /* TITRE / LOCATION */
+  
+      .title-location-title {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+  
+      .title-location-location {
+        font-size: 14px;
+      }
+  
+      /* TAGS */
+  
+      .tag {
+        font-size: 12px;
+        padding: 3px 12px;
+        border-radius: 6px;
+      }
+  
+      /* HOST */
+  
+      .host {
+        gap: 8px;
+      }
+  
+      .host-name {
+        font-size: 12px;
+        width: auto;
+      }
+  
+      .host-picture {
+        width: 32px;
+        height: 32px;
+        padding-right: 10px;
+      }
+  
+      /* RATING */
+  
+      .rating {
+        gap: 2px;
+      }
+  
+      .star {
+        width: 20px;
+        height: 20px;
+      }
+  
+      /* COLLAPSES */
+  
+      .property-collapses {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px 0;
+      }
+  
+      .property-collapse {
+        width: 100%;
+      }
+  
+      .property .collapse-header h3 {
+        font-size: 13px;
+        font-weight: 500;
+      }
+  
+      .collapse-header {
+        padding: 8px 12px;
+      }
+  
+      .collapse-arrow {
+        width: 20px;
+      }
+  
+      .collapse-content {
+        font-size: 12px;
+      }
+  
+      .property-description,
+      .property-equipments p {
+        font-size: 12px;
+        line-height: 1.4;
+      }
+    }
