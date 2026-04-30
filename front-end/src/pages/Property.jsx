@@ -19,22 +19,24 @@ export default function Property() {
             .then(res => res.json())
             .then(data => {
                 const found = data.find(p => p.id === id)
-                setProperty(found || null)
+
+                if (!found) {
+                    setProperty(null)
+                } else {
+                    setProperty(found)
+                }
             })
-            .catch(err => {
-                console.error("Erreur API :", err)
+            .catch(() => {
                 setProperty(null)
             })
-            .finally(() => {
-                setLoading(false)
-            })
+            .finally(() => setLoading(false))
     }, [id])
 
     if (loading) {
         return <p>Chargement...</p>
     }
 
-    if (!property) {
+    if (!property && !loading) {
         return <Navigate to="/404" replace />
     }
 
