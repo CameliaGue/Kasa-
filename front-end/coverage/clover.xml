@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1777904376062" clover="3.2.0">
+  <project timestamp="1777904376062" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4" elements="14" coveredelements="14" complexity="0" loc="6" ncloc="6" packages="2" files="3" classes="3"/>
+    <package name="assets.images">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="arrow.png" path="/Users/cameliaguerroudj/Desktop/TESTEUR_LOGICIEL_COURS/PROJET_8/TesteurLogiciel_appli_location_immobiliere_React-main/front-end/src/assets/images/arrow.png">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="components">
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="Collapse.jsx" path="/Users/cameliaguerroudj/Desktop/TESTEUR_LOGICIEL_COURS/PROJET_8/TesteurLogiciel_appli_location_immobiliere_React-main/front-end/src/components/Collapse.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="Tags.jsx" path="/Users/cameliaguerroudj/Desktop/TESTEUR_LOGICIEL_COURS/PROJET_8/TesteurLogiciel_appli_location_immobiliere_React-main/front-end/src/components/Tags.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
