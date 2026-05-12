@@ -324,10 +324,8 @@ nav {
 .property-info-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: space-between;
   gap: 20px;
-  align-items: stretch;
 }
 
 .property-collapses {
@@ -476,11 +474,7 @@ nav {
     margin: 15px;
   }
 
-}
-
 /* HEADER */
-
-@media (max-width: 768px) {
 
   .header {
     padding: 0;
@@ -500,11 +494,8 @@ nav {
     text-transform: uppercase;
     font-size: 14px;
   }
-}
 
 /* BANNER */
-
-@media (max-width: 768px) {
 
   .banner {
     height: 120px;
@@ -516,20 +507,14 @@ nav {
   .banner h1 {
     width: 100%;
     text-align: center;
-    position: relative;
-    z-index: 1;
     margin: 0;
     padding: 0 20px;
   }
 
-}
 
 /* CARDS */
 
-@media (max-width: 768px) {
-
   .cards-container {
-    display: grid;
     grid-template-columns: 1fr;
     padding: 5px 0;
     margin: 30px 10px 0 10px;
@@ -541,11 +526,8 @@ nav {
   .card {
     height: 250px;
   }
-}
 
 /* ABOUT */
-
-@media (max-width: 768px) {
 
   .about-collapses {
     padding: 20px 10px 0 10px;
@@ -564,11 +546,8 @@ nav {
   .collapse-content {
     font-size: 16px;
   }
-}
 
 /* NOT FOUND */
-
-@media (max-width: 768px) {
 
   .notfound h1 {
     font-size: 120px;
@@ -583,13 +562,11 @@ nav {
     gap: 40px;
     margin-top: 60px;
   }
-}
 
 /* =======================
        PROPERTY CONTAINER
     ======================= */
 
-@media (max-width: 768px) {
   .property {
     padding: 0 10px;
     margin: 0;
@@ -732,4 +709,4 @@ nav {
     font-size: 12px;
     line-height: 1.4;
   }
-}
+    }

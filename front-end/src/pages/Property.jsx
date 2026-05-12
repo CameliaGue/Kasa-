@@ -35,8 +35,8 @@ export default function Property() {
     if (loading) {
         return <p>Chargement...</p>
     }
-
-    if (!property && !loading) {
+    
+    if (!property) {
         return <Navigate to="/404" replace />
     }
 

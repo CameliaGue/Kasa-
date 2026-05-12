@@ -15,14 +15,14 @@ function App() {
         <Header />
 
         <main className="page-content app-container">
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/property/:id" element={<Property />} />
-            <Route path="/404" element={<NotFound />} />
-            <Route path="*" element={<Navigate to="/404" />} />
-            
+            <Route path="*" element={<NotFound />} />
           </Routes>
+          
         </main>
 
         <Footer />
